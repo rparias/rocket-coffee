@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductListItem from './ProductListItem'
 import { action } from '@storybook/addon-actions'
-import { text, withKnobs } from '@storybook/addon-knobs'
+import { boolean, text, withKnobs } from '@storybook/addon-knobs'
 
 // original way to crate stories in Storybook
 // import { storiesOf } from '@storybook/react'
@@ -19,5 +19,6 @@ export const standard = () => (
     price={ text("price", "2.50") }
     onAddToCart={action('Add to cart clicked')}
     imageUrl={ text("imageUrl", "https://source.unsplash.com/tNALoIZhqVM/200x100/") }
+    isSoldOut={ boolean("isSoldOut", false) }
   />
 )
