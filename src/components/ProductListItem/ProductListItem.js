@@ -1,14 +1,18 @@
 import React from 'react'
+import Button from '../Button'
+import Card from '../Card'
+import Heading from '../Heading'
+import Text from '../Text'
 import './ProductListItem.css'
 
 const ProductListItem = ({name, price, imageUrl, onAddToCart, isSoldOut, isOnSale}) => {
   return (
-    <div className={'card' + (isOnSale ? ' onSale' : '')}>
-      <h2>{name + (isOnSale ? ' (On Sale)' : '')}</h2>
+    <Card highlight={isOnSale}>
+      <Heading>{name} {isOnSale && "(On Sale)"}</Heading>
       <img src={imageUrl} alt={name} />
-      <small>{price}</small>
-      <button onClick={onAddToCart} disabled={isSoldOut}>{isSoldOut ? 'Sold out' : 'Add to Cart'}</button>
-    </div>
+      <Text>{price}</Text>
+      <Button onClick={onAddToCart} disabled={isSoldOut}>{isSoldOut ? 'Sold out' : 'Add to Cart'}</Button>
+    </Card>
   )
 }
 
