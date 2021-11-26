@@ -20,5 +20,6 @@ export const standard = () => (
     onAddToCart={action('Add to cart clicked')}
     imageUrl={ text("imageUrl", "https://source.unsplash.com/tNALoIZhqVM/200x100/") }
     isSoldOut={ boolean("isSoldOut", false) }
+    isOnSale={ boolean("isOnSale", false) }
   />
 )
