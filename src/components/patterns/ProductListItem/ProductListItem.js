@@ -1,9 +1,8 @@
 import React from 'react'
-import Button from '../Button'
-import Card from '../Card'
-import Heading from '../Heading'
-import Text from '../Text'
-import './ProductListItem.css'
+import Button from '../../atoms/Button'
+import Card from '../../atoms/Card'
+import Heading from '../../atoms/Heading'
+import Text from '../../atoms/Text'
 
 const ProductListItem = ({name, price, imageUrl, onAddToCart, isSoldOut, isOnSale}) => {
   return (
